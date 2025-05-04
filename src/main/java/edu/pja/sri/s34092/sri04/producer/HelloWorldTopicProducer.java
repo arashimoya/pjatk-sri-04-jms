@@ -18,7 +18,7 @@ public class HelloWorldTopicProducer {
     private final JmsTemplate jmsTemplate;
     private final static Logger LOGGER = LoggerFactory.getLogger(HelloWorldTopicProducer.class);
 
-    @Scheduled(fixedRate = 2500)
+//    @Scheduled(fixedRate = 2500)
     public void sendHello() {
         HelloMessage message = HelloMessage.builder()
                 .id(HelloMessage.nextId())

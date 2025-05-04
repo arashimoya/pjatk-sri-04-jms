@@ -22,7 +22,7 @@ public class SendAndReceiveProducer {
     private final JmsMessagingTemplate jmsMessagingTemplate;
     private final static Logger LOGGER = LoggerFactory.getLogger(SendAndReceiveProducer.class);
 
-    @Scheduled(fixedRate = 2000)
+//    @Scheduled(fixedRate = 5000)
     public void sendAndReceive() {
         HelloMessage message = HelloMessage.builder()
                 .id(HelloMessage.nextId())
@@ -39,7 +39,7 @@ public class SendAndReceiveProducer {
                 message,
                 HelloResponse.class
         );
-        Optional<String> responseTextOpt = Optional.ofNullable(response).map(HelloResponse::getMessage);
+        Optional<String> responseTextOpt = Optional.of(response).map(HelloResponse::getMessage);
 
         LOGGER.info("I've received a response: {} \tconvertedMessage: {}", responseTextOpt.orElse("null"), response);
     }

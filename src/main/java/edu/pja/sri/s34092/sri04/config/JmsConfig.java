@@ -15,7 +15,6 @@ import org.springframework.jms.support.converter.MappingJackson2MessageConverter
 import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
 import org.springframework.jms.support.destination.DynamicDestinationResolver;
-import org.springframework.lang.Nullable;
 
 @Configuration
 @EnableJms
@@ -24,6 +23,8 @@ public class JmsConfig {
     public static final String QUEUE_HELLO_WORLD = "HELLO.QUEUE";
     public static final String TOPIC_HELLO_WORLD = "HELLO.TOPIC";
     public static final String QUEUE_SEND_AND_RECEIVE = "SEND_RECEIVE.QUEUE";
+
+    public static final String PIT_STOP = "PIT_STOP.QUEUE";
 
     @Bean
     public JmsListenerContainerFactory<?> queueConnectionFactory(
