@@ -27,7 +27,7 @@ public class PitStopReceiver {
     private final static Logger LOGGER = LoggerFactory.getLogger(PitStopReceiver.class);
     private final Random random = new Random();
 
-    @JmsListener(destination = JmsConfig.QUEUE_SEND_AND_RECEIVE)
+    @JmsListener(destination = JmsConfig.PIT_STOP)
     public void receiveAndRespond(
             @Payload PitStopMessage convertedMessage,
             @Headers MessageHeaders headers,

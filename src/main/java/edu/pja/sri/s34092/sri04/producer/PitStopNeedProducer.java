@@ -21,7 +21,6 @@ public class PitStopNeedProducer {
     private final JmsTemplate jmsTemplate;
     private final JmsMessagingTemplate jmsMessagingTemplate;
     private final static Logger LOGGER = LoggerFactory.getLogger(PitStopNeedProducer.class);
-
     private final Random random = new Random();
 
     @Scheduled(fixedRate = 2000)
