@@ -25,6 +25,9 @@ public class JmsConfig {
     public static final String QUEUE_SEND_AND_RECEIVE = "SEND_RECEIVE.QUEUE";
 
     public static final String PIT_STOP = "PIT_STOP.QUEUE";
+    public static final String TELEMETRY_TOPIC = "TELEMETRY.TOPIC";
+    public static final String TELEMETRY_MECHANIC_QUEUE = "TELEMETRY.MECHANIC.QUEUE";
+    public static final String TELEMETRY_DRIVER_QUEUE = "TELEMETRY.DRIVER.QUEUE";
 
     @Bean
     public JmsListenerContainerFactory<?> queueConnectionFactory(
